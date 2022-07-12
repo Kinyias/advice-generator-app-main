@@ -1,0 +1,65 @@
+@import 'variable';
+.card{
+    max-width: 35rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 2.8rem;
+    position: relative;
+    border-radius: 20px;
+    background-color: $Dark-Grayish-Blue;
+    &-advice{
+        &-id{
+            text-transform: uppercase;
+            color: $Neon-Green;
+            margin: 1.1rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.3rem;
+        }
+        &-content{
+            text-align: center;
+            font-size: 1.8rem;
+            color: $Light-Cyan;
+        }
+        &-dice{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 0;
+            padding: 1.5rem;
+            width: fit-content;
+            transform: translateY(50%);
+            background-color: $Neon-Green;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover{
+                box-shadow: 0 0 3rem $Neon-Green
+            }
+        }
+    }
+    .desktop{
+        // display: none;
+        margin: 2.5rem;
+    }
+    .moblie{
+        display: none;
+        margin: 2.5rem;
+    }
+}
+@media (max-width:1023px) {
+    .container{
+        width: 90%;
+        margin-left: 1rem;
+    }
+    .card{
+        .desktop{
+            display: none;
+        }
+        .moblie{
+            display: block;
+        }
+    }
+}
